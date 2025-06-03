@@ -25,13 +25,14 @@ Los entornos están separados pero interconectados.
 - ❌ Falta de separación por entornos (dev/test/prod).
 
 ### 🔹 Capa de Aplicación
-- ❌ Validación insegura por `X-Application` (fácil de falsificar).
-- ❌ Protección insuficiente con solo WAF (SQLi y DDoS).
-- ❌ No se evidencia uso de autenticación/autorización real.
+- ❌ Validación insegura por `X-Application` (fácil de falsificar)/ Realizar trafico para interceptar esa validación de header y ver los valores de headers.
+- ❌ Protección insuficiente con solo WAF (SQLi y DDoS)/ Ataces de DDos y SQLI hacia el WAF para saber si existen las reglas de configuración.
+- ❌ No se evidencia uso de autenticación/autorización real/ Atacar por phishing.
 
 ### 🔹 Capa de Autenticación
 - ❌ Sin MFA, Cognito, JWT ni tokens de acceso válidos.
 - ❌ No hay control granular de acceso.
+- ❌ Un ataque de sniffing, o "intercepción de paquetes" para interceptar contraseñas o cambio de credenciales para poder acceder a la aplicación.
 
 ### 🔹 Capa de Almacenamiento
 - ❌ **Bucket S3 con acceso público**.
