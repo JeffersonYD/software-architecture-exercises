@@ -1,6 +1,6 @@
 # 🛡️ Caso de Estudio: Cifrado Fuerte, Configuración Débil
 
-## 🧩 Contexto
+## 🧩 1. Contexto
 
 Una startup ha lanzado su MVP en AWS con la siguiente arquitectura:
 
@@ -12,7 +12,7 @@ Una startup ha lanzado su MVP en AWS con la siguiente arquitectura:
 
 ---
 
-## 🔍 Análisis de vulnerabilidades
+## 🔍 2. Análisis de vulnerabilidades
 
 ### 1. Protección débil de la API
 - API Key fácilmente filtrable, sin autenticación por usuario ni control de acceso.
@@ -28,7 +28,7 @@ Una startup ha lanzado su MVP en AWS con la siguiente arquitectura:
 
 ---
 
-## ✅ Rediseño seguro (manteniendo simplicidad)
+## ✅ 3. Rediseño seguro (manteniendo simplicidad)
 
 ### 🔐 Autenticación de API
 
@@ -85,7 +85,7 @@ Una startup ha lanzado su MVP en AWS con la siguiente arquitectura:
 
 ---
 
-## 🔄 Diagrama Comparativo
+## 🔄 4. Diagrama Comparativo
 
 | ❌ Arquitectura Insegura | ✅ Arquitectura Segura |
 |--------------------------|------------------------|
@@ -97,6 +97,6 @@ Una startup ha lanzado su MVP en AWS con la siguiente arquitectura:
 
 ---
 
-## 📌 Conclusión
+## 📌 5. Conclusión
 
 Este caso demuestra que incluso usando servicios seguros (DynamoDB, SES, API Gateway), una **configuración débil** puede comprometer todo el sistema. Aplicar **autenticación fuerte**, **principio de menor privilegio**, y **observabilidad global** es esencial para proteger MVPs desde el inicio.
